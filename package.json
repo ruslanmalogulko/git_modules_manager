@@ -1,0 +1,27 @@
+{
+  "name": "git_modules_manager",
+  "version": "1.0.0",
+  "description": "It's a tool for manage git modules according to config file (bunch install and removing) to manage many repos in one click",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruslanmalogulko/git_modules_manager.git"
+  },
+  "keywords": [
+    "git",
+    "npm",
+    "node"
+  ],
+  "author": "Ruslan Malohulko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruslanmalogulko/git_modules_manager/issues"
+  },
+  "homepage": "https://github.com/ruslanmalogulko/git_modules_manager#readme",
+  "dependencies": {
+    "async": "^2.6.0"
+  }
+}
