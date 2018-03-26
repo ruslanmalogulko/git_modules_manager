@@ -57,8 +57,9 @@ function resolveWithDependencies(modulesToInstall) {
     function resolveDependencies(depItem) {
         const relevantDefinition = get(definitions, depItem, {});
         resolvedList.push(relevantDefinition.name);
+        relevantDefinition.isAdded = true;
 
-        if (!isEmpty(relevantDefinition.dependencies)) {
+        if (!isEmpty(relevantDefinition.dependencies) && !relevantDefinition.isAdded) {
             relevantDefinition.dependencies.forEach(dep => resolveDependencies(dep));
         }
     }

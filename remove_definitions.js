@@ -18,7 +18,7 @@ function removeDefinitions(modulesToRemove) {
                 return callback(null, `Successfully removed ${moduleItem}!`);
             });
         } else {
-            callback(`Error: no such module detected: (${moduleItem})`);
+            callback(null, `Error: no such module detected: (${moduleItem})`);
         }
     }), 3, (err, results) => {
         if (err) {

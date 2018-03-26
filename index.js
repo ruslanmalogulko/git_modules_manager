@@ -4,6 +4,7 @@ const modulesToOperate = typeof argv.p === 'string' ? argv.p.split(',') : [];
 const operations = require('./consts').operations;
 const installDefinitions = require('./install_definitions');
 const removeDefinitions = require('./remove_definitions');
+const definitions = require('./module_definitions').byName;
 const log = require('./utils').log;
 
 switch(operation) {
@@ -15,12 +16,8 @@ switch(operation) {
     {
         return removeDefinitions(modulesToOperate);
     }
-  case operations.update:
-    {
-        return console.log('Err: Not implemented yet');
-    }
   case operations.removeAll:
     {
-        return console.log('Err: Not implemented yet');
+        return removeDefinitions(Object.keys(definitions));
     }
 }
